@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 3;
+        private static int NUM_ITEMS = 4;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     return FragmentWithOneImage.newInstance("Fragment 2", R.drawable.android_2);
                 case 2:
                     return FragmentWithTwoImages.newInstance("Fragment 3", R.drawable.android_3, R.drawable.android_4);
+                case 3:
+                    return Aboutme.newInstance();
                 default:
                     return null;
             }
@@ -80,4 +82,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
